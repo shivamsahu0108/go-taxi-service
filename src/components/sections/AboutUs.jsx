@@ -1,5 +1,6 @@
 import { CheckCircle2, Clock3, MapPin, Phone, ShieldCheck } from 'lucide-react';
-import { BUSINESS, DISPLAY_PHONE } from '../../config/contact';
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa6';
+import { BUSINESS, DISPLAY_PHONE, SOCIAL_LINKS } from '../../config/contact';
 
 const highlights = [
   'Local taxi and city travel in Jabalpur',
@@ -9,6 +10,12 @@ const highlights = [
   'Sightseeing, wedding and event transportation',
   'Service options across Madhya Pradesh and other Indian destinations',
 ];
+
+const socialIcons = {
+  Facebook: FaFacebookF,
+  Instagram: FaInstagram,
+  YouTube: FaYoutube,
+};
 
 export default function AboutUs() {
   return (
@@ -63,6 +70,20 @@ export default function AboutUs() {
               <div>
                 <span className="about-info-icon"><ShieldCheck size={17} /></span>
                 <span><b>Travel options</b><small>Local, airport, outstation, sightseeing and group travel</small></span>
+              </div>
+            </div>
+
+            <div className="about-socials" aria-label="Go Taxi social media">
+              <span>Follow Go Taxi</span>
+              <div>
+                {SOCIAL_LINKS.map(({ label, href }) => {
+                  const Icon = socialIcons[label];
+                  return (
+                    <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={`Go Taxi on ${label}`} title={label}>
+                      <Icon size={16} aria-hidden="true" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </aside>
