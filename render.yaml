@@ -1,0 +1,6 @@
+services:
+  - type: web
+    runtime: static
+    name: go-taxi
+    buildCommand: npm run build
+    staticPublishPath: ./dist
