@@ -1,0 +1,11 @@
+{
+  "standard": "E.164",
+  "contacts": [
+    {
+      "display": "+91 7722900823",
+      "e164": "+917722900823",
+      "whatsapp_url": "https://wa.me/917722900823"
+    }
+  ],
+  "deduplication_note": "Primary website contact is centralized in src/config/contact.js."
+}
