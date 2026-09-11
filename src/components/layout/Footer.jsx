@@ -1,6 +1,7 @@
 import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa6';
 import { mpCities } from '../../data/siteData';
-import { BUSINESS, BUSINESS_EMAIL, DISPLAY_PHONE, WHATSAPP_NUMBER } from '../../config/contact';
+import { BUSINESS, BUSINESS_EMAIL, DISPLAY_PHONE, SOCIAL_LINKS, WHATSAPP_NUMBER } from '../../config/contact';
 
 const quickLinks = [
   ['Book Taxi', '#booking'],
@@ -9,6 +10,12 @@ const quickLinks = [
   ['MP wild tours', '#tours'],
   ['FAQs', '#faq'],
 ];
+
+const socialIcons = {
+  Facebook: FaFacebookF,
+  Instagram: FaInstagram,
+  YouTube: FaYoutube,
+};
 
 export default function Footer() {
   const phoneHref = `tel:${DISPLAY_PHONE.replace(/\s/g, '')}`;
@@ -36,6 +43,16 @@ export default function Footer() {
           <a href={whatsappHref} target="_blank" rel="noreferrer"><MessageCircle size={15} /> <span>WhatsApp booking</span></a>
           <a href={`mailto:${BUSINESS_EMAIL}`}><Mail size={15} /> <span>{BUSINESS_EMAIL}</span></a>
           <a href={mapsHref} target="_blank" rel="noreferrer"><MapPin size={15} /> <span>{BUSINESS.address}</span></a>
+          <div className="footer-socials" aria-label="Go Taxi social media">
+            {SOCIAL_LINKS.map(({ label, href }) => {
+              const Icon = socialIcons[label];
+              return (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={`Go Taxi on ${label}`} title={label}>
+                  <Icon size={16} aria-hidden="true" />
+                </a>
+              );
+            })}
+          </div>
         </div>
         <div>
           <h4>Quick links</h4>
