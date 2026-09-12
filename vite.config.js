@@ -9,6 +9,6 @@ export default defineConfig({
   },
   preview: {
     host: true,
-    allowedHosts: ['gotaxiservice.onrender.com']
+    allowedHosts: ['gotaxiservice.netlify.app']
   }
 });

@@ -1,8 +1,8 @@
-# Go Taxi Jabalpur — SEO implementation notes
+# Go Taxi Jabalpur â€” SEO implementation notes
 
 ## Implemented in the React project
 
-- One canonical homepage URL: `https://gotaxi.in/`
+- One canonical homepage URL: `https://gotaxiservice.netlify.app/`
 - Search-friendly title and meta description focused on Jabalpur taxi intent
 - Canonical, Open Graph and Twitter metadata
 - `TaxiService` + `WebSite` JSON-LD structured data
@@ -12,7 +12,7 @@
 - FAQ section and navigation link
 - `robots.txt` with sitemap reference
 - `sitemap.xml` for the currently published homepage
-- Render preview allowed hosts for the Render URL and planned custom domain
+- Netlify is the current primary deployment domain.
 - Removed the old duplicate phone number from active website contact data
 
 ## Important Google Business Profile step
@@ -21,7 +21,7 @@ The website code cannot edit Google Business Profile. In GBP, verify that the re
 
 - Business name
 - Primary phone number
-- Website: `https://gotaxi.in/`
+- Website: `https://gotaxiservice.netlify.app/`
 - Address/service area
 - Primary category: Taxi service
 - Services, hours and photos
@@ -32,10 +32,10 @@ Do not add keywords to the GBP business name unless they are genuinely part of t
 
 ## After deployment
 
-1. Add/connect `gotaxi.in` in Google Search Console.
-2. Submit `https://gotaxi.in/sitemap.xml`.
+1. Add/connect `gotaxiservice.netlify.app` in Google Search Console.
+2. Submit `https://gotaxiservice.netlify.app/sitemap.xml`.
 3. Inspect the homepage URL and request indexing.
-4. In Google Business Profile, set the website to `https://gotaxi.in/`.
+4. In Google Business Profile, set the website to `https://gotaxiservice.netlify.app/`.
 5. Keep the NAP (name, address, phone) consistent across legitimate business directories.
 6. Ask real customers for genuine reviews; do not buy or fabricate reviews.
 7. Add genuine business/vehicle/location photos and keep the profile active.

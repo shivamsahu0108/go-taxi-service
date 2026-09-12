@@ -11,7 +11,7 @@ export const SOCIAL_LINKS = [
 export const BUSINESS = {
   name: 'Go Taxi Jabalpur',
   legalName: 'Go Taxi Service Jabalpur',
-  url: 'https://gotaxiservice.onrender.com/',
+  url: 'https://gotaxiservice.netlify.app/',
   address: 'Beside Petrol Pump, Shop No 02, Govindh Bhavan Colony, South Civil Lines, Jabalpur, Madhya Pradesh 482001',
   city: 'Jabalpur',
   region: 'Madhya Pradesh',

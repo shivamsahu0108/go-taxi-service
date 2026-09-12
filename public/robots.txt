@@ -5,4 +5,4 @@ Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /dist/
 
-Sitemap: https://gotaxiservice.onrender.com/sitemap.xml
+Sitemap: https://gotaxiservice.netlify.app/sitemap.xml
