@@ -27,16 +27,19 @@ export default function Navbar() {
       <div className="container nav">
         <a href="#top" className="brand">
           <img className="brand-mark" src="/images/logo.png" alt="Go Taxi Jabalpur" />
-          <span>Go <b>Taxi</b></span>
+          <span>Go <b>Taxi</b> Service</span>
         </a>
         <nav className={menuOpen ? 'is-open' : ''}>
           {links.map(([label, href]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}</a>)}
         </nav>
         <div className="nav-actions">
-          <a className="btn btn-light" href={`tel:${DISPLAY_PHONE.replace(/\s/g, '')}`}>
-            <Phone size={16}/> Call
+          <a className="btn btn-light" href={`tel:${DISPLAY_PHONE.replace(/\s/g, '')}`} aria-label="Call Go Taxi" title="Call Go Taxi">
+            <Phone size={16}/><span>Call</span>
           </a>
-          <WhatsAppButton className="btn-sm" />
+          <WhatsAppButton
+            className="btn-sm"
+            message="Hello Go Taxi Jabalpur, I need a van taxi for family or group travel around Jabalpur or for an outstation journey. Please share vehicle availability, fare and booking details."
+          />
         </div>
         <button
           className="nav-menu-toggle"

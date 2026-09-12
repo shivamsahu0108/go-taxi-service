@@ -1052,6 +1052,19 @@ footer {
   .nav-menu-toggle {
     display: inline-flex;
   }
+  .nav-actions {
+    gap: 6px;
+  }
+  .nav-actions .btn span,
+  .nav-actions .whatsapp-button span {
+    display: none;
+  }
+  .nav-actions .btn,
+  .nav-actions .whatsapp-button {
+    width: 38px;
+    min-height: 38px;
+    padding: 0;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
   }
@@ -1084,12 +1097,8 @@ footer {
   .nav {
     height: 64px;
   }
-  .nav-actions .btn-light {
-    display: none;
-  }
   .nav-actions .btn-whatsapp {
     min-height: 40px;
-    padding: 0 11px;
   }
   .hero {
     padding-top: 48px;

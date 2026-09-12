@@ -64,8 +64,12 @@ export function buildPackageWhatsAppMessage(pkg) {
 }
 
 
-export function getWhatsAppLink(booking) {
-  const message = buildWhatsAppMessage(
+export function getWhatsAppLink(booking, message) {
+  if (message) {
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  }
+
+  const defaultMessage = buildWhatsAppMessage(
     booking || {
       pickup: 'Jabalpur',
       drop: '',
@@ -76,7 +80,7 @@ export function getWhatsAppLink(booking) {
   );
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    message
+    defaultMessage
   )}`;
 }
 
