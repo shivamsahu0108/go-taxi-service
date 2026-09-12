@@ -26,7 +26,7 @@ export default function Navbar() {
     <header className="nav-wrap">
       <div className="container nav">
         <a href="#top" className="brand">
-          <img className="brand-mark" src="/images/logo.png" alt="Go Taxi Jabalpur" />
+          <img className="brand-mark" src="/images/logo.png" alt="Go Taxi Service" />
           <span>Go <b>Taxi</b> Service</span>
         </a>
         <nav className={menuOpen ? 'is-open' : ''}>

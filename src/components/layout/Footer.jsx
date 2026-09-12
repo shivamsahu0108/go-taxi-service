@@ -27,8 +27,8 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <a href="#top" className="brand footer-brand">
-            <img className="brand-mark" src="/images/logo.png" alt="Go Taxi Jabalpur" />
-            <span>Go <b>Taxi</b></span>
+            <img className="brand-mark" src="/images/logo.png" alt="Go Taxi Service" />
+            <span>Go <b>Taxi</b> Service</span>
           </a>
           <p>Jabalpur taxi service for airport pickup, local sightseeing, outstation travel and all-India journeys.</p>
           <div className="footer-phone"><Phone size={16}/> {DISPLAY_PHONE}</div>
@@ -59,7 +59,7 @@ export default function Footer() {
           {quickLinks.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
         </div>
       </div>
-      <div className="footer-bottom">© {new Date().getFullYear()} Go Taxi Jabalpur. Local taxi service in Jabalpur, Madhya Pradesh.</div>
+      <div className="footer-bottom">© {new Date().getFullYear()} Go Taxi Service. Local taxi service in Jabalpur, Madhya Pradesh.</div>
     </footer>
   );
 }

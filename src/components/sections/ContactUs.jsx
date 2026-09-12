@@ -20,10 +20,10 @@ export default function ContactUs() {
         <div className="contact-grid">
           <div className="contact-card contact-details-card">
             <div className="contact-profile">
-              <img className="contact-logo" src="/images/logo.png" alt="Go Taxi Jabalpur" />
+              <img className="contact-logo" src="/images/logo.png" alt="Go Taxi Service" />
               <div>
                 <span className="contact-business-type">Taxi service & car rental</span>
-                <h3>Go Taxi Jabalpur</h3>
+                <h3>Go Taxi Service</h3>
                 <p>24/7 local, airport and outstation travel support.</p>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function ContactUs() {
             <div className="contact-map-header">
               <div>
                 <span className="eyebrow">Business location</span>
-                <h3>Go Taxi Jabalpur</h3>
+                <h3>Go Taxi Service</h3>
               </div>
               <a href={mapsUrl} target="_blank" rel="noreferrer" aria-label="Open Go Taxi Jabalpur in Google Maps">
                 <Navigation size={17} /> Maps

@@ -24,7 +24,7 @@ export default function AboutUs() {
         <div className="about-grid">
           <div className="about-copy">
             <span className="eyebrow">About Go Taxi</span>
-            <h2 id="about-title">Go Taxi Service Jabalpur</h2>
+            <h2 id="about-title">Go Taxi Service</h2>
             <p className="about-lead">
               Go Taxi is a local taxi and cab service based in Jabalpur, Madhya Pradesh,
               helping customers with everyday city travel, airport and railway station
@@ -49,7 +49,7 @@ export default function AboutUs() {
           <aside className="about-card" aria-label="Go Taxi business information">
             <div className="about-card-top">
               <div className="about-logo-wrap">
-                <img src="/images/logo.png" alt="Go Taxi Service Jabalpur logo" />
+                <img src="/images/logo.png" alt="Go Taxi Service logo" />
               </div>
               <div>
                 <span className="about-card-label">Local taxi service</span>
