@@ -26,16 +26,16 @@ export default function AboutUs() {
             <span className="eyebrow">About Go Taxi</span>
             <h2 id="about-title">Go Taxi Service</h2>
             <p className="about-lead">
-              Go Taxi is a local taxi and cab service based in Jabalpur, Madhya Pradesh,
-              helping customers with everyday city travel, airport and railway station
-              transfers, sightseeing, outstation trips and group transportation.
+              Go Taxi Service Jabalpur is a local taxi service in Jabalpur, Madhya Pradesh,
+              offering Jabalpur Airport Taxi pickup and drop, railway station transfers,
+              local taxi rides, outstation taxi trips and comfortable group transportation.
             </p>
             <p>
-              Our focus is simple: make booking a taxi from Jabalpur easy through phone or
-              WhatsApp, with practical vehicle choices for individuals, families, business
-              travellers, tourists, weddings and larger groups. From local rides around
-              Jabalpur to longer journeys across Madhya Pradesh and other parts of India,
-              customers can enquire about the vehicle and trip that fits their travel plan.
+              Book a one-way taxi or round-trip cab from Jabalpur through phone or WhatsApp,
+              with practical vehicle choices for individuals, families, business travellers,
+              tourists, weddings and larger groups. From local rides around Jabalpur to
+              longer journeys across Madhya Pradesh and other parts of India, customers can
+              enquire about the vehicle and trip that fits their travel plan.
             </p>
 
             <div className="about-actions">
