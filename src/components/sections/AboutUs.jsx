@@ -73,19 +73,21 @@ export default function AboutUs() {
               </div>
             </div>
 
-            <div className="about-socials" aria-label="Go Taxi social media">
-              <span>Follow Go Taxi</span>
-              <div>
-                {SOCIAL_LINKS.map(({ label, href }) => {
-                  const Icon = socialIcons[label];
-                  return (
-                    <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={`Go Taxi on ${label}`} title={label}>
-                      <Icon size={16} aria-hidden="true" />
-                    </a>
-                  );
-                })}
+            {SOCIAL_LINKS.length > 0 && (
+              <div className="about-socials" aria-label="Go Taxi social media">
+                <span>Follow Go Taxi</span>
+                <div>
+                  {SOCIAL_LINKS.map(({ label, href }) => {
+                    const Icon = socialIcons[label];
+                    return (
+                      <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={`Go Taxi on ${label}`} title={label}>
+                        <Icon size={16} aria-hidden="true" />
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
+            )}
           </aside>
         </div>
 

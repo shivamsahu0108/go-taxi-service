@@ -3152,6 +3152,80 @@ body {
   outline-offset: 3px;
 }
 
+.card-contact-actions {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.card-contact-actions .card-call-button,
+.card-contact-actions .card-whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 50%;
+  min-height: 42px;
+  flex: 1 1 0;
+  padding: 0 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.card-contact-actions .card-call-button {
+  border: 1px solid #ffd269;
+  background: #ffd269;
+  color: #111827 !important;
+  box-shadow: 0 6px 16px rgba(255, 210, 105, 0.18);
+}
+
+.card-contact-actions .card-whatsapp-button {
+  border: 1px solid #39d982;
+  background: #20c46a;
+  color: #fff !important;
+}
+
+.card-contact-actions .card-call-button:hover,
+.card-contact-actions .card-whatsapp-button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.card-contact-actions .card-call-button:hover {
+  color: #111827 !important;
+  background: #ffc34f;
+}
+
+.card-contact-actions .card-whatsapp-button:hover {
+  color: #fff !important;
+}
+
+.card-contact-actions .card-call-button:focus-visible,
+.card-contact-actions .card-whatsapp-button:focus-visible {
+  outline: 3px solid rgba(215, 173, 88, 0.7);
+  outline-offset: 3px;
+}
+
+@media (max-width: 420px) {
+  .card-contact-actions {
+    gap: 6px;
+  }
+
+  .card-contact-actions .card-call-button,
+  .card-contact-actions .card-whatsapp-button {
+    padding: 0 8px;
+    font-size: 11px;
+  }
+}
+
 .book-main {
   width: 100%;
   margin-top: 12px;

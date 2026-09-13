@@ -11,7 +11,8 @@
 - Jabalpur-focused H1 and service copy
 - FAQ section and navigation link
 - `robots.txt` with sitemap reference
-- `sitemap.xml` for the currently published homepage
+- `sitemap.xml` for the homepage and six published local landing pages, with `lastmod` dates
+- Static landing pages under `public/` with unique titles, descriptions, canonicals, OG metadata and H1s
 - Netlify is the current primary deployment domain.
 - Removed the old duplicate phone number from active website contact data
 
@@ -42,9 +43,9 @@ Do not add keywords to the GBP business name unless they are genuinely part of t
 
 ## SEO limitation of this version
 
-This is still a single-page React site. The sitemap intentionally contains only `/` because the project does not currently have separate crawlable route pages. Do not put fake or fragment URLs into the sitemap.
+The interactive experience is still a single-page React app, while the published service URLs are static crawlable landing pages under `public/`. Keep those pages useful and aligned with the booking experience; do not put fake or fragment URLs into the sitemap.
 
-For stronger organic growth, the next phase should create real pages such as:
+For stronger organic growth, the next phase should create additional real pages such as:
 
 - `/taxi-service-jabalpur`
 - `/airport-taxi-jabalpur`

@@ -12,8 +12,7 @@ import {
 
 import { routes } from "../../data/siteData";
 import SectionHeader from "../common/SectionHeader";
-import WhatsAppButton from "../common/WhatsAppButton";
-import { getToday } from "../../utils/booking";
+import CardContactActions from "../common/CardContactActions";
 
 export default function Routes({ onSelectRoute }) {
   const [query, setQuery] = useState("");
@@ -264,25 +263,9 @@ function RouteCard({ route, onSelectRoute }) {
             </div>
           </div>
 
-          <WhatsAppButton
-            booking={{
-              pickup: route.from,
-              drop: route.to,
-              date: getToday(),
-              time: "09:00",
-              passengers: 4,
-            }}
-            className="route-book"
-            onClick={(event) => {
-              if (onSelectRoute) {
-                event.preventDefault();
-                onSelectRoute(route);
-              }
-            }}
-          >
-            <span>Book Ride</span>
-            <ArrowRight size={17} />
-          </WhatsAppButton>
+          <CardContactActions
+            message={`Hello Go Taxi, I want to enquire about a taxi from ${route.from} to ${route.to}.`}
+          />
         </div>
       </div>
     </article>

@@ -1,7 +1,7 @@
-import { CalendarDays, MessageCircle, Moon, ArrowRight } from 'lucide-react';
+import { CalendarDays, Moon } from 'lucide-react';
 import { wildTours } from '../../data/siteData';
 import SectionHeader from '../common/SectionHeader';
-import { getPackageWhatsAppLink } from '../../utils/booking';
+import CardContactActions from '../common/CardContactActions';
 
 export default function WildTours() {
   return (
@@ -23,8 +23,6 @@ export default function WildTours() {
 }
 
 function TourCard({ tour }) {
-  const packageLink = getPackageWhatsAppLink(tour);
-
   return (
     <article className="tour-card">
       <img
@@ -45,9 +43,9 @@ function TourCard({ tour }) {
 
         <div className="tour-bottom">
           <span>{tour.highlights}</span>
-          <a href={packageLink} target="_blank" rel="noreferrer" className="tour-whatsapp-btn">
-            <MessageCircle size={16} /> Book Package <ArrowRight size={15} />
-          </a>
+          <CardContactActions
+            message={`Hello Go Taxi, I want to enquire about the ${tour.name} package from Jabalpur.`}
+          />
         </div>
       </div>
     </article>

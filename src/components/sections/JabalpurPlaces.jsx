@@ -1,7 +1,7 @@
-import { ArrowRight, CalendarDays, MapPin, MessageCircle } from 'lucide-react';
+import { CalendarDays, MapPin } from 'lucide-react';
 import { jabalpurPlaces } from '../../data/siteData';
 import SectionHeader from '../common/SectionHeader';
-import { getPackageWhatsAppLink } from '../../utils/booking';
+import CardContactActions from '../common/CardContactActions';
 
 export default function JabalpurPlaces() {
   return (
@@ -31,8 +31,6 @@ function PlaceCard({ place }) {
     price: 'Get Quote',
     highlights: 'Private cab • Flexible timing • Local sightseeing',
   };
-  const packageLink = getPackageWhatsAppLink(localPackage);
-
   return (
     <article className="city-card place-card">
       <div className="place-image-wrap">
@@ -57,14 +55,9 @@ function PlaceCard({ place }) {
           <span><b>Cost:</b> Get Quote</span>
         </div>
 
-        <a
-          href={packageLink}
-          target="_blank"
-          rel="noreferrer"
-          className="tour-whatsapp-btn place-whatsapp-btn"
-        >
-          <MessageCircle size={16} /> Book Local Tour <ArrowRight size={15} />
-        </a>
+        <CardContactActions
+          message={`Hello Go Taxi, I want to enquire about a local sightseeing taxi for ${place.name} in Jabalpur.`}
+        />
       </div>
     </article>
   );

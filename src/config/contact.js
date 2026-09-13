@@ -3,9 +3,8 @@ export const WHATSAPP_NUMBER = '917722900823';
 export const BUSINESS_EMAIL = 'jabalpurtaxigo@gmail.com';
 
 export const SOCIAL_LINKS = [
-  { label: 'Facebook', href: 'https://www.facebook.com/' },
-  { label: 'Instagram', href: 'https://www.instagram.com/' },
-  { label: 'YouTube', href: 'https://www.youtube.com/' },
+  { label: 'Facebook', href: 'https://www.facebook.com/share/1Ar45Af4wb/' },
+  { label: 'Instagram', href: 'https://www.instagram.com/gotaxiservicejabalpur?stkn=MzloMGI1d2wxNjJ6' },
 ];
 
 export const BUSINESS = {

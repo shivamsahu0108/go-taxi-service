@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   BusFront,
   MapPin,
   Plane,
@@ -7,6 +6,7 @@ import {
 } from 'lucide-react';
 
 import SectionHeader from '../common/SectionHeader';
+import CardContactActions from '../common/CardContactActions';
 
 const items = [
   {
@@ -129,16 +129,9 @@ function ServiceCard({
 
         <p>{desc}</p>
 
-        <button
-          type="button"
-          className="service-book-link"
-          onClick={() =>
-            onSelectService?.(data)
-          }
-        >
-          Book this service
-          <ArrowRight size={15} />
-        </button>
+        <CardContactActions
+          message={`Hello Go Taxi, I want to enquire about ${title} in Jabalpur.`}
+        />
 
       </div>
 

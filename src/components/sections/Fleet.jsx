@@ -1,6 +1,7 @@
-import { ArrowRight, CheckCircle2, Luggage, Users } from 'lucide-react';
+import { CheckCircle2, Luggage, Users } from 'lucide-react';
 import { fleet } from '../../data/siteData';
 import SectionHeader from '../common/SectionHeader';
+import CardContactActions from '../common/CardContactActions';
 
 export default function Fleet({ onSelectVehicle }) {
   return (
@@ -61,10 +62,9 @@ function CarCard({ vehicle, onSelectVehicle }) {
           ))}
         </ul>
 
-        <button type="button" className="text-link fleet-book-btn" onClick={selectVehicle}>
-          Book {vehicle.name}
-          <ArrowRight size={15} />
-        </button>
+        <CardContactActions
+          message={`Hello Go Taxi, I want to enquire about a ${vehicle.name} for my trip from Jabalpur.`}
+        />
       </div>
     </article>
   );
