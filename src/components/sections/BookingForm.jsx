@@ -338,6 +338,7 @@ export default function BookingForm({
       <WhatsAppButton
         booking={booking}
         className="book-main"
+        ariaLabel="Book this taxi on WhatsApp"
         onClick={(event) => {
           if (!validateDrop()) {
             event.preventDefault();
@@ -420,17 +421,10 @@ function BookingFields({
         icon={MapPin}
         label="Pickup location"
       >
-        <input
-          list="go-taxi-location-options"
+        <LocationInput
           value={form.pickup}
-          onChange={(event) =>
-            update(
-              'pickup',
-              event.target.value
-            )
-          }
+          onChange={(value) => update('pickup', value)}
           placeholder="Search city, airport, station…"
-          autoComplete="off"
         />
       </BookingField>
 
@@ -440,32 +434,12 @@ function BookingFields({
         icon={Navigation}
         label="Drop location"
       >
-        <input
-          list="go-taxi-location-options"
+        <LocationInput
           value={form.drop}
-          onChange={(event) =>
-            update(
-              'drop',
-              event.target.value
-            )
-          }
+          onChange={(value) => update('drop', value)}
           placeholder="Search any city / state…"
           required
-          autoComplete="off"
         />
-
-        <datalist
-          id="go-taxi-location-options"
-        >
-          {pickupOptions.map(
-            (location) => (
-              <option
-                key={location}
-                value={location}
-              />
-            )
-          )}
-        </datalist>
       </BookingField>
 
 
@@ -657,5 +631,51 @@ function BookingField({
 
       {children}
     </label>
+  );
+}
+
+function LocationInput({ value, onChange, placeholder, required = false }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const query = value.trim().toLowerCase();
+  const suggestions = pickupOptions
+    .filter((location) => !query || location.toLowerCase().includes(query))
+    .slice(0, 8);
+
+  return (
+    <div className="location-input-wrap">
+      <input
+        value={value}
+        onChange={(event) => {
+          onChange(event.target.value);
+          setIsOpen(true);
+        }}
+        onFocus={() => setIsOpen(true)}
+        onBlur={() => window.setTimeout(() => setIsOpen(false), 120)}
+        placeholder={placeholder}
+        required={required}
+        autoComplete="off"
+        role="combobox"
+        aria-expanded={isOpen}
+        aria-autocomplete="list"
+      />
+      {isOpen && suggestions.length > 0 && (
+        <div className="location-suggestions" role="listbox" aria-label="Matching locations">
+          {suggestions.map((location) => (
+            <button
+              key={location}
+              type="button"
+              role="option"
+              onMouseDown={(event) => event.preventDefault()}
+              onClick={() => {
+                onChange(location);
+                setIsOpen(false);
+              }}
+            >
+              {location}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }

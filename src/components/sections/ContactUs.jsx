@@ -22,7 +22,7 @@ export default function ContactUs() {
         <div className="contact-grid">
           <div className="contact-card contact-details-card">
             <div className="contact-profile">
-              <img className="contact-logo" src="/images/logo.webp" alt="Go Taxi Service" width="72" height="72" />
+              <img className="contact-logo" src="/images/logo.webp" alt="" width="72" height="72" />
               <div>
                 <span className="contact-business-type">Taxi service & car rental</span>
                 <h3>Go Taxi Service</h3>

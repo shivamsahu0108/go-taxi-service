@@ -27,7 +27,7 @@ export default function Navbar() {
     <header className="nav-wrap">
       <div className="container nav">
         <a href="#top" className="brand">
-          <img className="brand-mark" src="/images/logo.webp" alt="Go Taxi Service" width="74" height="74" />
+          <img className="brand-mark" src="/images/logo.webp" alt="" width="74" height="74" />
           <span>Go <b>Taxi</b> Service</span>
         </a>
         <nav className={menuOpen ? 'is-open' : ''}>
@@ -39,6 +39,7 @@ export default function Navbar() {
           </a>
           <WhatsAppButton
             className="btn-sm"
+            ariaLabel="WhatsApp Go Taxi for van and group travel"
             message="Hello Go Taxi Jabalpur, I need a van taxi for family or group travel around Jabalpur or for an outstation journey. Please share vehicle availability, fare and booking details."
           />
         </div>

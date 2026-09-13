@@ -7,6 +7,7 @@ export default function WhatsAppButton({
   children,
   className = '',
   onClick,
+  ariaLabel = 'WhatsApp Go Taxi booking',
 }) {
   const whatsappLink = getWhatsAppLink(booking, message);
 
@@ -16,8 +17,8 @@ export default function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       className={`whatsapp-button ${className}`}
-      aria-label="WhatsApp Go Taxi"
-      title="WhatsApp Go Taxi"
+      aria-label={ariaLabel}
+      title={ariaLabel}
       onClick={onClick}
     >
       {children || <><MessageCircle size={16} /><span>WhatsApp</span></>}
