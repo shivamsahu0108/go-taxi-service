@@ -544,6 +544,8 @@ select {
 }
 .car-body {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .car-type {
   font-size: 10px;
@@ -782,6 +784,8 @@ select {
   border-radius: 18px;
   padding: 22px;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
 }
 .category-icon {
   font-size: 28px;
@@ -822,6 +826,8 @@ select {
 }
 .city-card > div {
   padding: 18px;
+  display: flex;
+  flex-direction: column;
 }
 .city-card span {
   font-size: 10px;
@@ -1578,6 +1584,8 @@ footer {
 /* Local Jabalpur place cards as WhatsApp-bookable tour packages */
 .place-card-body {
   padding: 18px;
+  display: flex;
+  flex-direction: column;
 }
 .place-topline {
   display: flex;
@@ -1722,6 +1730,8 @@ footer {
 
 .service-card-content {
   padding: 22px;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card-content h3 {
@@ -3157,7 +3167,8 @@ body {
   align-items: stretch;
   gap: 8px;
   width: 100%;
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 18px;
 }
 
 .card-contact-actions .card-call-button,
@@ -3165,13 +3176,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 8px;
   width: 50%;
-  min-height: 42px;
+  min-height: 46px;
   flex: 1 1 0;
-  padding: 0 12px;
-  border-radius: 10px;
-  font-size: 12px;
+  padding: 0 14px;
+  border-radius: 12px;
+  font-size: 13px;
   font-weight: 800;
   line-height: 1;
   white-space: nowrap;
@@ -3191,6 +3202,15 @@ body {
   border: 1px solid #39d982;
   background: #20c46a;
   color: #fff !important;
+  box-shadow: 0 6px 16px rgba(32, 196, 106, 0.18);
+}
+
+.route-card-footer .card-contact-actions,
+.tour-bottom .card-contact-actions {
+  width: min(300px, 100%);
+  flex: 0 1 300px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .card-contact-actions .card-call-button:hover,
@@ -3223,6 +3243,18 @@ body {
   .card-contact-actions .card-whatsapp-button {
     padding: 0 8px;
     font-size: 11px;
+  }
+
+  .route-card-footer,
+  .tour-bottom {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .route-card-footer .card-contact-actions,
+  .tour-bottom .card-contact-actions {
+    width: 100%;
+    flex-basis: auto;
   }
 }
 
