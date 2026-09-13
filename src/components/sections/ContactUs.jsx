@@ -7,6 +7,8 @@ const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent('Civil L
 
 export default function ContactUs() {
   const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent('Hello Go Taxi, I would like to enquire about taxi booking in Jabalpur.')}`;
+  const phoneHref = `tel:${DISPLAY_PHONE.replace(/\s/g, '')}`;
+  const emailHref = `mailto:${BUSINESS_EMAIL}`;
 
   return (
     <section className="section contact-section" id="contact">
@@ -29,26 +31,11 @@ export default function ContactUs() {
             </div>
 
             <div className="contact-items">
-              <a href={`tel:${DISPLAY_PHONE.replace(/\s/g, '')}`}>
-                <span className="contact-icon"><Phone size={18} /></span>
-                <span><b>Call us</b><small>{DISPLAY_PHONE}</small></span>
-              </a>
-              <a href={whatsappHref} target="_blank" rel="noreferrer">
-                <span className="contact-icon contact-icon-green"><MessageCircle size={18} /></span>
-                <span><b>WhatsApp</b><small>Quick booking & enquiries</small></span>
-              </a>
-              <a href={`mailto:${BUSINESS_EMAIL}`}>
-                <span className="contact-icon"><Mail size={18} /></span>
-                <span><b>Email</b><small>jabalpurtaxigo@gmail.com</small></span>
-              </a>
-              <div className="contact-static">
-                <span className="contact-icon"><MapPin size={18} /></span>
-                <span><b>Location</b><small>{address}</small></span>
-              </div>
-              <div className="contact-static">
-                <span className="contact-icon"><Clock3 size={18} /></span>
-                <span><b>Business hours</b><small>Open 24 hours · Monday to Sunday</small></span>
-              </div>
+              <ContactMethod href={phoneHref} icon={Phone} label="Call us" detail={DISPLAY_PHONE} />
+              <ContactMethod href={whatsappHref} icon={MessageCircle} label="WhatsApp" detail="Quick booking & enquiries" accent external />
+              <ContactMethod href={emailHref} icon={Mail} label="Email" detail={BUSINESS_EMAIL} />
+              <ContactMethod icon={MapPin} label="Location" detail={address} />
+              <ContactMethod icon={Clock3} label="Business hours" detail="Open 24 hours · Monday to Sunday" />
             </div>
 
             <div className="contact-actions">
@@ -88,4 +75,19 @@ export default function ContactUs() {
       </div>
     </section>
   );
+}
+
+function ContactMethod({ href, icon: Icon, label, detail, accent = false, external = false }) {
+  const content = (
+    <>
+      <span className={`contact-icon${accent ? ' contact-icon-green' : ''}`}><Icon size={18} /></span>
+      <span><b>{label}</b><small>{detail}</small></span>
+    </>
+  );
+
+  if (!href) {
+    return <div className="contact-static">{content}</div>;
+  }
+
+  return <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined}>{content}</a>;
 }

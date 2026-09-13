@@ -11,6 +11,7 @@ const links = [
   ['MP Tours', '#tours'],
   ['Cities', '#cities'],
   ['FAQs', '#faq'],
+  ['Contact', '#contact'],
 ];
 
 export default function Navbar() {
