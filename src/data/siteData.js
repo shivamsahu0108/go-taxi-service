@@ -342,14 +342,14 @@ export const jabalpurPlaces = [
     region: "Jabalpur",
     description:
       "Scenic Narmada river cliffs and marble canyon views, ideal for a Jabalpur half-day or full-day sightseeing taxi.",
-    image: "/images/JabalpurPlace/Jabalpur-Sightseeing.jpg",
+    image: "/images/JabalpurPlace/Jabalpur-Sightseeing.webp",
   },
   {
     name: "Dhuandhar Falls",
     region: "Bhedaghat",
     description:
       "Visit the famous waterfall on the Narmada with a private cab and flexible local sightseeing time.",
-    image: "/images/JabalpurPlace/Dhuandhar-Falls.png",
+    image: "/images/JabalpurPlace/Dhuandhar-Falls.webp",
   },
   {
     name: "Chausath Yogini Temple",
@@ -370,7 +370,7 @@ export const jabalpurPlaces = [
     region: "Jabalpur",
     description:
       "Historic fort and city viewpoint associated with Gond heritage, suitable for a local Jabalpur sightseeing route.",
-    image: "/images/JabalpurPlace/Madan-Mahal-Fort.jpg",
+    image: "/images/JabalpurPlace/Madan-Mahal-Fort.webp",
   },
   {
     name: "Gwarighat",

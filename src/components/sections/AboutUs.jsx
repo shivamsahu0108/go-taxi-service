@@ -49,7 +49,7 @@ export default function AboutUs() {
           <aside className="about-card" aria-label="Go Taxi business information">
             <div className="about-card-top">
               <div className="about-logo-wrap">
-                <img src="/images/logo.png" alt="Go Taxi Service logo" />
+                <img src="/images/logo.webp" alt="Go Taxi Service logo" width="72" height="72" />
               </div>
               <div>
                 <span className="about-card-label">Local taxi service</span>

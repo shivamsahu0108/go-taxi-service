@@ -14,7 +14,7 @@ const items = [
     title: 'Airport & Railway Pickup',
     desc: 'Dumna Airport (JLR), Jabalpur Junction and local station transfers.',
     Icon: Plane,
-    image: '/images/service/Dumna.jpg',
+    image: '/images/service/Dumna.webp',
     data: {
       service: 'Airport & Railway Pickup',
       pickup:
@@ -28,7 +28,7 @@ const items = [
     title: 'Local Jabalpur Sightseeing',
     desc: 'Bhedaghat, Marble Rocks, Dhuandhar Falls, Bargi Dam and city trips.',
     Icon: MapPin,
-    image: '/images/service/Jabalpur-Sightseeing.jpg',
+    image: '/images/service/Jabalpur-Sightseeing.webp',
     data: {
       service: 'Local Jabalpur Sightseeing',
       pickup: 'Jabalpur, Madhya Pradesh',
@@ -41,7 +41,7 @@ const items = [
     title: 'Outstation Taxi',
     desc: 'One-way and round-trip cab options across Madhya Pradesh and beyond.',
     Icon: Route,
-    image: '/images/service/outstation-taxi.jpg',
+    image: '/images/service/outstation-taxi.webp',
     data: {
       service: 'Outstation Taxi',
       pickup: 'Jabalpur, Madhya Pradesh',
@@ -54,7 +54,7 @@ const items = [
     title: 'Wedding & Group Travel',
     desc: 'SUVs, luxury cars, Tempo Travellers and 26/52-seat buses for events.',
     Icon: BusFront,
-    image: '/images/service/Wedding-Group-Travel.jpg',
+    image: '/images/service/Wedding-Group-Travel.webp',
     data: {
       service: 'Wedding & Group Travel',
       pickup: 'Jabalpur, Madhya Pradesh',

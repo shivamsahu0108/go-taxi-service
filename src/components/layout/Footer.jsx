@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="container footer-grid">
         <div>
           <a href="#top" className="brand footer-brand">
-            <img className="brand-mark" src="/images/logo.png" alt="Go Taxi Service" />
+            <img className="brand-mark" src="/images/logo.webp" alt="Go Taxi Service" width="74" height="74" />
             <span>Go <b>Taxi</b> Service</span>
           </a>
           <p>Jabalpur taxi service for airport pickup, local sightseeing, outstation travel and all-India journeys.</p>
