@@ -6,8 +6,8 @@ https://gotaxiservice.netlify.app/
 ## Website completed
 - Canonical, Open Graph, Twitter and schema URLs use the current Netlify domain.
 - `robots.txt` points to the current sitemap.
-- Sitemap includes the homepage and six local service pages.
-- Six crawlable local landing pages are included under `public/`.
+- Sitemap includes the homepage, six local service pages and ten route pages.
+- Six service and ten route landing pages are crawlable under `public/`.
 - Fleet image poster references use files that actually exist in `public/images/Cars/`.
 - Placeholder Facebook/Instagram/YouTube links were removed.
 - Vite preview allows the current Netlify hostname.

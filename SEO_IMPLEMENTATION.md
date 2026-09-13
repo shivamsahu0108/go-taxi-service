@@ -11,8 +11,8 @@
 - Jabalpur-focused H1 and service copy
 - FAQ section and navigation link
 - `robots.txt` with sitemap reference
-- `sitemap.xml` for the homepage and six published local landing pages, with `lastmod` dates
-- Static landing pages under `public/` with unique titles, descriptions, canonicals, OG metadata and H1s
+- `sitemap.xml` for the homepage, six service landing pages and ten route landing pages, with `lastmod` dates
+- Static landing pages under `public/` with unique titles, descriptions, canonicals, service copy, FAQs, internal links and H1s
 - Netlify is the current primary deployment domain.
 - Removed the old duplicate phone number from active website contact data
 
@@ -41,17 +41,6 @@ Do not add keywords to the GBP business name unless they are genuinely part of t
 6. Ask real customers for genuine reviews; do not buy or fabricate reviews.
 7. Add genuine business/vehicle/location photos and keep the profile active.
 
-## SEO limitation of this version
+## SEO content model
 
-The interactive experience is still a single-page React app, while the published service URLs are static crawlable landing pages under `public/`. Keep those pages useful and aligned with the booking experience; do not put fake or fragment URLs into the sitemap.
-
-For stronger organic growth, the next phase should create additional real pages such as:
-
-- `/taxi-service-jabalpur`
-- `/airport-taxi-jabalpur`
-- `/outstation-taxi-jabalpur`
-- `/car-rental-jabalpur`
-- `/jabalpur-to-kanha-taxi`
-- `/jabalpur-to-bandhavgarh-taxi`
-
-Each page should contain unique, useful content and real service information.
+The interactive experience remains a single-page React app, while published service and route URLs are static crawlable landing pages under `public/`. Service pages focus on distinct search intent, and route pages contain destination-specific travel guidance, booking information, FAQs and links to related routes. Keep pages useful and aligned with the actual service; do not add pages or keywords for routes that are not served.
