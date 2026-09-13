@@ -3169,6 +3169,7 @@ body {
   width: 100%;
   margin-top: auto;
   padding-top: 18px;
+  min-height: 64px;
 }
 
 .card-contact-actions .card-call-button,
@@ -3180,6 +3181,7 @@ body {
   width: 50%;
   min-height: 46px;
   flex: 1 1 0;
+  min-width: 0;
   padding: 0 14px;
   border-radius: 12px;
   font-size: 13px;
@@ -3189,6 +3191,18 @@ body {
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.card-contact-actions .card-call-button span,
+.card-contact-actions .card-call-button svg {
+  color: #111827 !important;
+  opacity: 1 !important;
+}
+
+.card-contact-actions .card-whatsapp-button span,
+.card-contact-actions .card-whatsapp-button svg {
+  color: #ffffff !important;
+  opacity: 1 !important;
 }
 
 .card-contact-actions .card-call-button {
