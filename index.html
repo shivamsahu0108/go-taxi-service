@@ -36,6 +36,56 @@
     <meta property="og:image:alt" content="Go Taxi Service Jabalpur logo" />
     <meta property="og:locale" content="en_IN" />
 
+    <style>
+      .app-loading {
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: #070a10;
+        color: #edf2f7;
+      }
+
+      .app-loading__content {
+        width: min(520px, 100%);
+      }
+
+      .app-loading__brand,
+      .app-loading__line {
+        background: #182231;
+        border-radius: 8px;
+        animation: app-loading-pulse 1.2s ease-in-out infinite;
+      }
+
+      .app-loading__brand {
+        width: 180px;
+        height: 28px;
+        margin-bottom: 32px;
+      }
+
+      .app-loading__line {
+        height: 16px;
+        margin-top: 14px;
+      }
+
+      .app-loading__line--wide {
+        width: 82%;
+        height: 42px;
+      }
+
+      .app-loading__line--short {
+        width: 58%;
+      }
+
+      @keyframes app-loading-pulse {
+        50% {
+          opacity: 0.55;
+        }
+      }
+    </style>
+
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Go Taxi Service Jabalpur | Airport, Local & Outstation Taxi" />
     <meta
@@ -158,7 +208,15 @@
   </head>
   <body>
     <div id="root">
-      <main>
+      <div class="app-loading" role="status" aria-label="Loading Go Taxi Service">
+        <div class="app-loading__content" aria-hidden="true">
+          <div class="app-loading__brand"></div>
+          <div class="app-loading__line app-loading__line--wide"></div>
+          <div class="app-loading__line"></div>
+          <div class="app-loading__line app-loading__line--short"></div>
+        </div>
+      </div>
+      <main class="seo-fallback">
         <h1>Taxi Service in Jabalpur - Go Taxi Service</h1>
         <p>
           Go Taxi Service Jabalpur provides local taxi, Jabalpur Airport Taxi,
