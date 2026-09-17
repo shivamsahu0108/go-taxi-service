@@ -11,6 +11,8 @@ import Categories from './components/sections/Categories';
 import Cities from './components/sections/Cities';
 import ContactUs from './components/sections/ContactUs';
 import FAQ from './components/sections/FAQ';
+import CallButton from './components/common/CallButton';
+import WhatsAppButton from './components/common/WhatsAppButton';
 import { useState } from 'react';
 
 export default function App() {
@@ -62,5 +64,11 @@ export default function App() {
       <ContactUs />
     </main>
     <Footer />
+    <CallButton />
+    <WhatsAppButton
+      className="floating-whatsapp-button"
+      ariaLabel="WhatsApp Go Taxi for booking enquiries"
+      message="Hello Go Taxi, I would like to enquire about taxi booking in Jabalpur."
+    />
   </>;
 }
